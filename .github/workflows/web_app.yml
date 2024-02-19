@@ -31,8 +31,8 @@ jobs:
   - name: python install
     working-directory: ${{ env.WORKING_DIRECTORY }}
     run: |
-     sudo apt install python${{ env.PYTHON_VERSION }}-venv
-     python -m venv --copies antenv
+     pip install --upgrade pip
+     python3.8 -m venv --copies antenv
      source antenv/bin/activate
      pip install setuptools
      pip install -r requirements.txt
